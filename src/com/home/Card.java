@@ -49,4 +49,9 @@ public class Card implements Comparable<Card>, ICard{
         }
         return card;
     }
+
+    @Override
+    public int getValue() {
+        return face.getValue();
+    }
 }

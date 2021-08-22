@@ -36,4 +36,18 @@ public class Player implements IPlayer{
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public void addDiscardedCard(ICard card) {
+        discardedCards.add(card);
+    }
+
+    @Override
+    public void useDiscardedCards() {
+        if(cards.isEmpty()){
+            for (ICard c: discardedCards) {
+                cards.push(c);
+            }
+        }
+    }
 }

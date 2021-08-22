@@ -6,4 +6,6 @@ public interface IPlayer {
     boolean hasMoreCards();
     String getName();
     void setName(String name);
+    void addDiscardedCard(ICard card);
+    void useDiscardedCards();
 }
