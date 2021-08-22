@@ -1,6 +1,7 @@
 package com.home;
 
 public interface IDeck {
-    ICard drawCard();
+    ICard dealCard() throws DeckIsEmptyException;
     void shuffleDeck();
+    boolean isEmpty();
 }
